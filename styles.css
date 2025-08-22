@@ -1,0 +1,318 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.home {
+  background: url('images/bg.jpg') no-repeat center center/cover;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+}
+
+body.detail {
+  background-color: #f4f4f4;
+  font-family: 'Segoe UI', sans-serif;
+  color: #222;
+  transition: background 0.6s ease;
+}
+
+.roadtrip-bg {
+  background: url('images/roadtrip.jpg') no-repeat center center/cover;
+}
+
+.international-bg {
+  background: url('images/international.jpg') no-repeat center center/cover;
+}
+
+.weekend-bg {
+  background: url('images/weekend.jpg') no-repeat center center/cover;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 128, 0.8);
+  padding: 1rem 2rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  color: rgb(97, 31, 31);
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.tiles-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem 1rem;
+  flex-wrap: wrap;
+}
+
+/* Make the tile layout horizontal */
+.tiles {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px 20px;
+  flex-wrap: wrap; /* Allows wrapping on small screens */
+}
+.back-home {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.back-home a {
+  display: inline-block;
+  background-color: #0e86d4;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.back-home a:hover {
+  background-color: #055e9d;
+}
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .blog-section {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .blog-post img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .read-more {
+    width: 100%;
+    text-align: center;
+  }
+
+  .back-home a {
+    width: 90%;
+    display: block;
+    margin: 20px auto;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    padding: 15px 10px;
+  }
+}
+
+/* Keep existing .tile styles, maybe add max-width for responsiveness */
+.tile {
+  background-color: #ffffffdd;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.tile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.tile img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.read-more {
+  display: inline-block;
+  margin: 15px 0;
+  padding: 10px 20px;
+  background-color: #0e86d4;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.read-more:hover {
+  background-color: #055e9d;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ffc107;
+}
+
+/* Push content below fixed navbar */
+.hero {
+  padding-top: 100px;
+  text-align: center;
+  background: url("images/bg.jpg") center/cover no-repeat;
+  color: rgb(1, 1, 1);
+  padding: 4rem 1rem;
+}
+
+/* Footer */
+.footer {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+/* Inside Page Styles */
+body.inside {
+  background-color: #f0f4f8;
+  font-family: 'Segoe UI', sans-serif;
+  color: #222;
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+.inside-content {
+  max-width: 960px;
+  margin: auto;
+  padding: 2rem;
+  animation: zoomOut 0.6s ease;
+}
+
+.content-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s ease;
+}
+
+.content-card h2 {
+  color: #007BFF;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.content-card p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+}
+
+.content-card ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.content-card li {
+  margin-bottom: 0.6rem;
+  font-size: 1.05rem;
+}
+
+/* Optional hover effect for better interactivity */
+.content-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Inner Page Content */
+.content-box {
+  background: white;
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.content-box h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #0047ab;
+}
+
+.content-box p {
+  line-height: 1.7;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+/* Zoom-out Transition */
+.animate-zoom {
+  animation: zoomOut 0.6s ease;
+}
+
+@keyframes zoomOut {
+  from {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tiles-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
